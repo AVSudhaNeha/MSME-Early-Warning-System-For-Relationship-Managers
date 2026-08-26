@@ -34,6 +34,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
 import secrets
 from typing import Optional
 
@@ -60,6 +61,10 @@ def _load_users() -> dict:
 
 
 def _load_credentials() -> dict:
+    credentials_json = os.getenv("CREDENTIALS_JSON")
+    if credentials_json:
+        raw = json.loads(credentials_json)
+        return {k: v for k, v in raw.items() if not k.startswith("_")}
     if not CREDENTIALS_PATH.exists():
         return {}
     raw = json.loads(CREDENTIALS_PATH.read_text())
