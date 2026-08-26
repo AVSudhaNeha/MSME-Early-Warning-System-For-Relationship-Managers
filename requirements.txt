@@ -1,0 +1,11 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-dotenv
+openai
+httpx
+langgraph
+
+# Add more as you build — at minimum you'll likely need:
+# chromadb           — local vector store for RAG
+# tiktoken           — token counting (useful for chunking)

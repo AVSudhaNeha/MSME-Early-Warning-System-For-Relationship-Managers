@@ -1,0 +1,1223 @@
+[
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 1,
+    "subscores": {
+      "cash_flow": 80,
+      "gst_filing_delay": 84,
+      "industry_index": 50,
+      "vendor_payment": 84
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "baseline_coldstart",
+      "gst_filing_delay": "baseline_coldstart",
+      "industry_index": "baseline_coldstart",
+      "vendor_payment": "baseline_coldstart"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 77.5,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "baseline_coldstart",
+    "attribution": null,
+    "peer_avg_delta": null,
+    "peer_group_size": 0,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:05:47.971257+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 2,
+    "subscores": {
+      "cash_flow": 34,
+      "gst_filing_delay": 60,
+      "industry_index": 50,
+      "vendor_payment": 48
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 45.8,
+    "raw_tier": "Amber",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "borrower_specific",
+    "peer_avg_delta": null,
+    "peer_group_size": 1,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:05:48.005765+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 3,
+    "subscores": {
+      "cash_flow": 8,
+      "gst_filing_delay": 25,
+      "industry_index": 50,
+      "vendor_payment": 12
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 18.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": null,
+    "peer_group_size": 1,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_opened",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.048107+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 4,
+    "subscores": {
+      "cash_flow": 5,
+      "gst_filing_delay": 23,
+      "industry_index": 50,
+      "vendor_payment": 10
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 16.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -0.6,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.173715+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 5,
+    "subscores": {
+      "cash_flow": 8,
+      "gst_filing_delay": 25,
+      "industry_index": 50,
+      "vendor_payment": 8
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 17.7,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 0.8,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.237472+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 6,
+    "subscores": {
+      "cash_flow": 5,
+      "gst_filing_delay": 26,
+      "industry_index": 50,
+      "vendor_payment": 2
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 15.1,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 1.1,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.307996+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 7,
+    "subscores": {
+      "cash_flow": 7,
+      "gst_filing_delay": 25,
+      "industry_index": 50,
+      "vendor_payment": 0
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 14.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -1.8,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.376859+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 8,
+    "subscores": {
+      "cash_flow": 11,
+      "gst_filing_delay": 28,
+      "industry_index": 50,
+      "vendor_payment": 0
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 16.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -1.2,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.431845+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 9,
+    "subscores": {
+      "cash_flow": 8,
+      "gst_filing_delay": 30,
+      "industry_index": 50,
+      "vendor_payment": 0
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 16.3,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -0.1,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.492990+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 10,
+    "subscores": {
+      "cash_flow": 7,
+      "gst_filing_delay": 26,
+      "industry_index": 50,
+      "vendor_payment": 2
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 15.8,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -0.1,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.569046+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 11,
+    "subscores": {
+      "cash_flow": 6,
+      "gst_filing_delay": 23,
+      "industry_index": 50,
+      "vendor_payment": 6
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 16.0,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -0.2,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.632066+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 12,
+    "subscores": {
+      "cash_flow": 2,
+      "gst_filing_delay": 22,
+      "industry_index": 50,
+      "vendor_payment": 10
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 15.6,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -1.4,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:05:48.703895+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 13,
+    "subscores": {
+      "cash_flow": 0,
+      "gst_filing_delay": 20,
+      "industry_index": 50,
+      "vendor_payment": 8
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 13.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -0.4,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-07-31T10:16:26.077113+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 14,
+    "subscores": {
+      "cash_flow": 0,
+      "gst_filing_delay": 16,
+      "industry_index": 50,
+      "vendor_payment": 14
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 14.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 0.9,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-04T01:21:48.366997+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 15,
+    "subscores": {
+      "cash_flow": 4,
+      "gst_filing_delay": 19,
+      "industry_index": 50,
+      "vendor_payment": 16
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 17.5,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -0.9,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-04T01:27:15.359113+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 16,
+    "subscores": {
+      "cash_flow": 7,
+      "gst_filing_delay": 24,
+      "industry_index": 50,
+      "vendor_payment": 20
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 20.8,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -2.3,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-04T11:47:37.065195+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 17,
+    "subscores": {
+      "cash_flow": 9,
+      "gst_filing_delay": 23,
+      "industry_index": 50,
+      "vendor_payment": 16
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 20.1,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 1.8,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-04T15:32:19.476947+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 18,
+    "subscores": {
+      "cash_flow": 11,
+      "gst_filing_delay": 18,
+      "industry_index": 50,
+      "vendor_payment": 14
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 19.1,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -1.0,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-09T15:42:00.851996+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 19,
+    "subscores": {
+      "cash_flow": 6,
+      "gst_filing_delay": 14,
+      "industry_index": 50,
+      "vendor_payment": 16
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 17.2,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": -1.0,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-09T16:04:25.910997+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 20,
+    "subscores": {
+      "cash_flow": 9,
+      "gst_filing_delay": 9,
+      "industry_index": 50,
+      "vendor_payment": 20
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 18.4,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 0.7,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-10T07:08:36.280785+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 21,
+    "subscores": {
+      "cash_flow": 11,
+      "gst_filing_delay": 13,
+      "industry_index": 50,
+      "vendor_payment": 20
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 19.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 0.4,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-11T14:04:28.010964+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 22,
+    "subscores": {
+      "cash_flow": 15,
+      "gst_filing_delay": 16,
+      "industry_index": 50,
+      "vendor_payment": 24
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 23.1,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 1.0,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-11T17:02:25.117150+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 23,
+    "subscores": {
+      "cash_flow": 16,
+      "gst_filing_delay": 20,
+      "industry_index": 50,
+      "vendor_payment": 24
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 24.3,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "critical_floor_override_immediate",
+    "attribution": "critical_floor_override",
+    "peer_avg_delta": 2.2,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-11T19:32:49.867886+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 24,
+    "subscores": {
+      "cash_flow": 20,
+      "gst_filing_delay": 24,
+      "industry_index": 50,
+      "vendor_payment": 24
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 26.5,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.5,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-11T19:33:01.232873+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 25,
+    "subscores": {
+      "cash_flow": 25,
+      "gst_filing_delay": 23,
+      "industry_index": 50,
+      "vendor_payment": 20
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 26.9,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 1.4,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-11T19:45:38.141741+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 26,
+    "subscores": {
+      "cash_flow": 27,
+      "gst_filing_delay": 27,
+      "industry_index": 50,
+      "vendor_payment": 16
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 27.1,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.5,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-12T17:07:32.926308+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 27,
+    "subscores": {
+      "cash_flow": 32,
+      "gst_filing_delay": 30,
+      "industry_index": 50,
+      "vendor_payment": 12
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 28.3,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.3,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-12T17:17:15.380221+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 28,
+    "subscores": {
+      "cash_flow": 31,
+      "gst_filing_delay": 25,
+      "industry_index": 50,
+      "vendor_payment": 8
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 25.8,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.2,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-13T16:43:03.876485+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 29,
+    "subscores": {
+      "cash_flow": 33,
+      "gst_filing_delay": 22,
+      "industry_index": 50,
+      "vendor_payment": 8
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 25.8,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.8,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-13T18:18:06.519498+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 30,
+    "subscores": {
+      "cash_flow": 33,
+      "gst_filing_delay": 19,
+      "industry_index": 50,
+      "vendor_payment": 12
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 26.4,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.9,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-13T19:30:46.844509+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 31,
+    "subscores": {
+      "cash_flow": 38,
+      "gst_filing_delay": 17,
+      "industry_index": 50,
+      "vendor_payment": 12
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 27.8,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.2,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-14T03:30:40.696920+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 32,
+    "subscores": {
+      "cash_flow": 41,
+      "gst_filing_delay": 22,
+      "industry_index": 50,
+      "vendor_payment": 14
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 30.4,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.2,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-14T03:30:53.790205+00:00"
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "cycle": 33,
+    "subscores": {
+      "cash_flow": 42,
+      "gst_filing_delay": 17,
+      "industry_index": 50,
+      "vendor_payment": 16
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 30.4,
+    "raw_tier": "Red",
+    "tier": "Red",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 3.8,
+    "peer_group_size": 2,
+    "case_id": "MSME-1004-CASE-1",
+    "case_status": "open",
+    "case_lifecycle_action": "case_updated",
+    "rm_id": "RM002",
+    "rm_name": "Arjun Verma",
+    "case_action": "rm_outreach_plus_hardship_handoff",
+    "recorded_at": "2026-08-14T06:58:35.040038+00:00"
+  }
+]

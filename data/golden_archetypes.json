@@ -1,0 +1,815 @@
+[
+  {
+    "borrower_id": "MSME-1001",
+    "archetype": "steady",
+    "archetype_notes": "Control case \u2014 every cycle should classify Green, gate never confirms deterioration.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 88,
+          "cash_flow": 85,
+          "vendor_payment": 90,
+          "industry_index": 80
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 86.3,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": null,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 86,
+          "cash_flow": 87,
+          "vendor_payment": 88,
+          "industry_index": 81
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "stable_or_improving",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 86.2,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 89,
+          "cash_flow": 84,
+          "vendor_payment": 91,
+          "industry_index": 79
+        },
+        "gate_status": {
+          "gst_filing_delay": "stable_or_improving",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "stable_or_improving",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 86.3,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "stable_or_improving_applied_immediately",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 4,
+        "subscores": {
+          "gst_filing_delay": 87,
+          "cash_flow": 86,
+          "vendor_payment": 89,
+          "industry_index": 82
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "stable_or_improving",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 86.5,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "stable_or_improving_applied_immediately",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1002",
+    "archetype": "seasonal",
+    "archetype_notes": "Tests smoothing: a real seasonal pattern must never get misread as sustained decline.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 82,
+          "cash_flow": 78,
+          "vendor_payment": 80,
+          "industry_index": 75
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 79.0,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": null,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 81,
+          "cash_flow": 55,
+          "vendor_payment": 76,
+          "industry_index": 74
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 69.3,
+        "raw_tier": "Amber",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "off-season dip \u2014 single period, gate should read single_period_dip not confirmed"
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 83,
+          "cash_flow": 79,
+          "vendor_payment": 81,
+          "industry_index": 76
+        },
+        "gate_status": {
+          "gst_filing_delay": "stable_or_improving",
+          "cash_flow": "stable_or_improving",
+          "vendor_payment": "stable_or_improving",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 80.0,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "stable_or_improving_applied_immediately",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "recovers next cycle as expected for a seasonal pattern"
+      },
+      {
+        "cycle": 4,
+        "subscores": {
+          "gst_filing_delay": 80,
+          "cash_flow": 54,
+          "vendor_payment": 77,
+          "industry_index": 75
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 69.2,
+        "raw_tier": "Amber",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "second season's dip \u2014 still a single-period event relative to its own recovery, not a trend"
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1003",
+    "archetype": "gradual_decline",
+    "archetype_notes": "Peer index stays flat throughout \u2014 isolates borrower-specific decline from sector-wide movement.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 80,
+          "cash_flow": 78,
+          "vendor_payment": 82,
+          "industry_index": 70
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 78.4,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": 0,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 72,
+          "cash_flow": 68,
+          "vendor_payment": 74,
+          "industry_index": 71
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 71.0,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": 0.5,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 63,
+          "cash_flow": 58,
+          "vendor_payment": 65,
+          "industry_index": 69
+        },
+        "gate_status": {
+          "gst_filing_delay": "confirmed_deteriorating",
+          "cash_flow": "confirmed_deteriorating",
+          "vendor_payment": "confirmed_deteriorating",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 62.8,
+        "raw_tier": "Amber",
+        "tier": "Amber",
+        "smoothing_note": "confirmed_deteriorating_tier_applied",
+        "peer_avg_delta": 0.2,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "rm_outreach",
+        "cycle_notes": "2nd consecutive decline \u2014 gate should now read confirmed_deteriorating"
+      },
+      {
+        "cycle": 4,
+        "subscores": {
+          "gst_filing_delay": 50,
+          "cash_flow": 42,
+          "vendor_payment": 55,
+          "industry_index": 70
+        },
+        "gate_status": {
+          "gst_filing_delay": "confirmed_deteriorating",
+          "cash_flow": "confirmed_deteriorating",
+          "vendor_payment": "confirmed_deteriorating",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 51.7,
+        "raw_tier": "Amber",
+        "tier": "Amber",
+        "smoothing_note": "confirmed_deteriorating_tier_applied",
+        "peer_avg_delta": -0.3,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "rm_outreach",
+        "cycle_notes": "composite should cross into Amber here"
+      },
+      {
+        "cycle": 5,
+        "subscores": {
+          "gst_filing_delay": 38,
+          "cash_flow": 28,
+          "vendor_payment": 40,
+          "industry_index": 68
+        },
+        "gate_status": {
+          "gst_filing_delay": "confirmed_deteriorating",
+          "cash_flow": "confirmed_deteriorating",
+          "vendor_payment": "confirmed_deteriorating",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 39.6,
+        "raw_tier": "Red",
+        "tier": "Red",
+        "smoothing_note": "confirmed_deteriorating_tier_applied",
+        "peer_avg_delta": 0.1,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "rm_outreach_plus_hardship_handoff",
+        "cycle_notes": "peers flat while borrower keeps falling -> borrower_specific, not peer_driven"
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1004",
+    "archetype": "sharp_decline",
+    "archetype_notes": "Tests the critical-floor override: Red must not be softened even though peers barely moved.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 84,
+          "cash_flow": 80,
+          "vendor_payment": 83,
+          "industry_index": 76
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 81.1,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": 0,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 60,
+          "cash_flow": 35,
+          "vendor_payment": 48,
+          "industry_index": 74
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 49.8,
+        "raw_tier": "Amber",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": 1,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "sharp single-cycle collapse"
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 25,
+          "cash_flow": 8,
+          "vendor_payment": 12,
+          "industry_index": 70
+        },
+        "gate_status": {
+          "gst_filing_delay": "confirmed_deteriorating",
+          "cash_flow": "confirmed_deteriorating",
+          "vendor_payment": "confirmed_deteriorating",
+          "industry_index": "confirmed_deteriorating"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 21.9,
+        "raw_tier": "Red",
+        "tier": "Red",
+        "smoothing_note": "critical_floor_override_immediate",
+        "peer_avg_delta": 0.5,
+        "expected_attribution": "critical_floor_override",
+        "expected_case_action": "rm_outreach_plus_hardship_handoff",
+        "cycle_notes": "crosses the critical floor -> Red must fire regardless of peer context"
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1006",
+    "archetype": "false_alarm_recovery",
+    "archetype_notes": "A single bad reading must not be treated as a real trend (\u00a78, 'A single bad reading vs. a real trend').",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 85,
+          "cash_flow": 83,
+          "vendor_payment": 86,
+          "industry_index": 77
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 83.4,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": null,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 84,
+          "cash_flow": 60,
+          "vendor_payment": 84,
+          "industry_index": 76
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 74.4,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "one bad cash-flow cycle \u2014 single_period_dip only"
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 86,
+          "cash_flow": 82,
+          "vendor_payment": 85,
+          "industry_index": 78
+        },
+        "gate_status": {
+          "gst_filing_delay": "stable_or_improving",
+          "cash_flow": "stable_or_improving",
+          "vendor_payment": "stable_or_improving",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 83.1,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "stable_or_improving_applied_immediately",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "fully recovered \u2014 composite should read back near baseline, Green"
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1007",
+    "archetype": "peer_wide_shock",
+    "archetype_notes": "Opens a parallel portfolio-level review per \u00a78 in the real system; here we assert per-borrower attribution only.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 80,
+          "cash_flow": 76,
+          "vendor_payment": 79,
+          "industry_index": 78
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 78.0,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": 0,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 78,
+          "cash_flow": 55,
+          "vendor_payment": 60,
+          "industry_index": 45
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 59.6,
+        "raw_tier": "Amber",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": -18,
+        "expected_attribution": "peer_driven",
+        "expected_case_action": "log_only",
+        "cycle_notes": "sector-wide shock cycle \u2014 borrower's own delta tracks the peer group's delta closely"
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 72,
+          "cash_flow": 40,
+          "vendor_payment": 48,
+          "industry_index": 45
+        },
+        "gate_status": {
+          "gst_filing_delay": "confirmed_deteriorating",
+          "cash_flow": "confirmed_deteriorating",
+          "vendor_payment": "confirmed_deteriorating",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 49.5,
+        "raw_tier": "Amber",
+        "tier": "Amber",
+        "smoothing_note": "confirmed_deteriorating_tier_applied",
+        "peer_avg_delta": 0,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "rm_outreach",
+        "cycle_notes": "borrower keeps sliding after the shock while peers stabilize -> should flip to borrower_specific"
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1005",
+    "archetype": "cold_start",
+    "archetype_notes": "Cycle 1 gate_status must read baseline_coldstart for every signal, never confirmed/dipped.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 66,
+          "cash_flow": 58,
+          "vendor_payment": 70,
+          "industry_index": 72
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 65.3,
+        "raw_tier": "Amber",
+        "tier": "Amber",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": null,
+        "expected_attribution": null,
+        "expected_case_action": "rm_outreach",
+        "cycle_notes": "first cycle ever for this borrower (onboarded_cycle=6 in records.json) \u2014 no prior period exists"
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 65,
+          "cash_flow": 60,
+          "vendor_payment": 69,
+          "industry_index": 71
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "stable_or_improving",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 65.3,
+        "raw_tier": "Amber",
+        "tier": "Amber",
+        "smoothing_note": "stable_or_improving_applied_immediately",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "rm_outreach",
+        "cycle_notes": "second cycle \u2014 trend logic now applies normally"
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1008",
+    "archetype": "insufficient_data",
+    "archetype_notes": "Cycle 2 must produce tier=null, composite_score=null, expected_case_action=manual_review_insufficient_data.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 84,
+          "cash_flow": 81,
+          "vendor_payment": 85,
+          "industry_index": 79
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 82.5,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": null,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": null,
+          "cash_flow": 80,
+          "vendor_payment": null,
+          "industry_index": null
+        },
+        "gate_status": {
+          "gst_filing_delay": "unavailable_this_cycle",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "unavailable_this_cycle",
+          "industry_index": "unavailable_this_cycle"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "insufficient",
+        "composite_score": null,
+        "raw_tier": null,
+        "tier": null,
+        "smoothing_note": "insufficient_data_no_tier",
+        "peer_avg_delta": null,
+        "expected_attribution": null,
+        "expected_case_action": "manual_review_insufficient_data",
+        "cycle_notes": "only 1 of 4 signals returned this cycle (< MIN_SIGNALS_REQUIRED=2) -> flag Insufficient Data, no tier"
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 83,
+          "cash_flow": 79,
+          "vendor_payment": 84,
+          "industry_index": 78
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "confirmed_deteriorating",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 81.2,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "signals recover next cycle \u2014 scoring resumes normally"
+      }
+    ]
+  },
+  {
+    "borrower_id": "MSME-1009",
+    "archetype": "sandbox_outage",
+    "archetype_notes": "Cycle 2's cash_flow must still count toward MIN_SIGNALS_REQUIRED and the composite \u2014 a cache hit is not a data gap.",
+    "cycles": [
+      {
+        "cycle": 1,
+        "subscores": {
+          "gst_filing_delay": 82,
+          "cash_flow": 80,
+          "vendor_payment": 83,
+          "industry_index": 77
+        },
+        "gate_status": {
+          "gst_filing_delay": "baseline_coldstart",
+          "cash_flow": "baseline_coldstart",
+          "vendor_payment": "baseline_coldstart",
+          "industry_index": "baseline_coldstart"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 80.8,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "baseline_coldstart",
+        "peer_avg_delta": null,
+        "expected_attribution": null,
+        "expected_case_action": "log_only",
+        "cycle_notes": ""
+      },
+      {
+        "cycle": 2,
+        "subscores": {
+          "gst_filing_delay": 81,
+          "cash_flow": 80,
+          "vendor_payment": 82,
+          "industry_index": 76
+        },
+        "gate_status": {
+          "gst_filing_delay": "single_period_dip",
+          "cash_flow": "stable_or_improving",
+          "vendor_payment": "single_period_dip",
+          "industry_index": "single_period_dip"
+        },
+        "sandbox_status": "outage_cached_fallback",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 80.2,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "single_period_dip_smoothed_tier_held",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "AA sandbox call failed this cycle \u2014 cached last-known-good cash_flow reading used, counted as available, NOT as a missing-signal gap"
+      },
+      {
+        "cycle": 3,
+        "subscores": {
+          "gst_filing_delay": 83,
+          "cash_flow": 79,
+          "vendor_payment": 81,
+          "industry_index": 78
+        },
+        "gate_status": {
+          "gst_filing_delay": "stable_or_improving",
+          "cash_flow": "single_period_dip",
+          "vendor_payment": "confirmed_deteriorating",
+          "industry_index": "stable_or_improving"
+        },
+        "sandbox_status": "ok",
+        "data_availability": "full_or_partial_ok",
+        "composite_score": 80.2,
+        "raw_tier": "Green",
+        "tier": "Green",
+        "smoothing_note": "stable_or_improving_applied_immediately",
+        "peer_avg_delta": null,
+        "expected_attribution": "borrower_specific",
+        "expected_case_action": "log_only",
+        "cycle_notes": "sandbox back online next cycle"
+      }
+    ]
+  }
+]

@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MSME Early Warning — Portfolio Console</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12172B; --ink-soft:#3A3F58; --muted:#6B7086;
+    --paper:#F5F6FA; --card:#FFFFFF; --border:#E1E4EE;
+    --navy:#1E2761; --navy-dk:#141B47; --teal:#028090; --teal-lt:#E3F2F3;
+    --gold:#B8860B; --gold-lt:#FBF3DF;
+    --green:#1F7A3D; --green-lt:#E9F6ED;
+    --amber:#B8860B; --amber-lt:#FBF3DF;
+    --red:#B3261E; --red-lt:#FBEAE9;
+    --grey-badge:#6B7086; --grey-badge-lt:#EEEFF4;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(18,23,43,.04), 0 8px 24px -12px rgba(18,23,43,.12);
+    --serif:'Source Serif 4', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+    --mono:'IBM Plex Mono', ui-monospace, monospace;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    font-family:var(--sans); background:var(--paper); color:var(--ink);
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* ---------- Top bar ---------- */
+  .topbar{
+    height:64px; background:var(--navy); color:#fff; display:flex; align-items:center;
+    padding:0 22px; gap:18px; position:sticky; top:0; z-index:50;
+    box-shadow:0 2px 12px rgba(0,0,0,.18);
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:600; font-size:18px;}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--teal); box-shadow:0 0 0 4px rgba(2,128,144,.28);}
+  .topbar-spacer{flex:1;}
+  .run-cycle-btn, .advance-cycle-btn{
+    background:var(--teal); color:#fff; border:none; padding:9px 16px; border-radius:10px;
+    font-family:var(--sans); font-weight:600; font-size:13px; cursor:pointer;
+    display:flex; align-items:center; gap:8px; transition:filter .15s;
+  }
+  .advance-cycle-btn{background:var(--gold);}
+  .run-cycle-btn:hover, .advance-cycle-btn:hover{filter:brightness(1.08);}
+  .run-cycle-btn:disabled, .advance-cycle-btn:disabled{opacity:.55; cursor:wait;}
+  .role-chip{
+    display:flex; align-items:center; gap:8px; background:rgba(255,255,255,.08); padding:7px 13px;
+    border-radius:12px; font-size:12.5px; font-weight:600; color:#fff; white-space:nowrap;
+  }
+  .role-chip .badge{
+    font-size:9.5px; font-weight:700; letter-spacing:.4px; padding:2px 7px; border-radius:6px;
+    background:var(--teal); color:#fff; text-transform:uppercase;
+  }
+  .role-chip .badge.admin{background:var(--gold);}
+  .logout-btn{
+    background:transparent; border:1px solid rgba(255,255,255,.35); color:#fff; padding:8px 14px;
+    border-radius:10px; font-size:12.5px; font-weight:600; cursor:pointer; font-family:var(--sans);
+  }
+  .logout-btn:hover{background:rgba(255,255,255,.1);}
+
+  /* ---------- Role summary panel (RM portfolio / Admin overview) ---------- */
+  .role-panel{
+    background:#fff; border-bottom:1px solid var(--border); padding:16px 22px;
+    display:flex; align-items:center; gap:22px; flex-wrap:wrap;
+  }
+  .role-panel .panel-title{font-family:var(--serif); font-size:15px; font-weight:600; color:var(--navy); margin-right:6px;}
+  .mini-stat{display:flex; flex-direction:column; gap:2px; min-width:64px;}
+  .mini-stat .l{font-size:9.5px; letter-spacing:.8px; text-transform:uppercase; color:var(--muted); font-weight:700;}
+  .mini-stat .v{font-family:var(--mono); font-size:19px; font-weight:600; color:var(--ink);}
+  .mini-stat .v.green{color:var(--green);} .mini-stat .v.amber{color:var(--amber);} .mini-stat .v.red{color:var(--red);}
+  .panel-spacer{flex:1;}
+  .admin-actions{display:flex; gap:10px;}
+  .cycle-badge{
+    font-family:var(--mono); font-size:12.5px; font-weight:600; color:var(--ink-soft);
+    background:var(--paper); border:1px solid var(--border); padding:7px 12px; border-radius:9px;
+  }
+
+  /* ---------- App shell ---------- */
+  .shell{display:grid; grid-template-columns: 340px 1fr 380px; height:calc(100vh - 64px - 60px);}
+  @media (max-width: 1150px){ .shell{grid-template-columns: 300px 1fr;} .chat-col{display:none;} }
+
+  /* ---------- Portfolio list ---------- */
+  .portfolio-col{border-right:1px solid var(--border); overflow-y:auto; padding:18px 14px;}
+  .col-heading{font-size:11px; letter-spacing:1.5px; font-weight:700; color:var(--muted); text-transform:uppercase; padding:4px 8px 12px;}
+  .borrower-row{
+    background:var(--card); border:1px solid var(--border); border-radius:12px; padding:13px 14px;
+    margin-bottom:8px; cursor:pointer; transition:border-color .15s, transform .1s;
+  }
+  .borrower-row:hover{border-color:var(--teal);}
+  .borrower-row.selected{border-color:var(--navy); border-width:2px; padding:12px 13px;}
+  .borrower-row-top{display:flex; justify-content:space-between; align-items:flex-start; gap:8px;}
+  .borrower-name{font-weight:600; font-size:13.5px; color:var(--ink); line-height:1.3;}
+  .borrower-id{font-family:var(--mono); font-size:10.5px; color:var(--muted); margin-top:1px;}
+  .tier-pill{
+    display:inline-flex; align-items:center; gap:5px; padding:3px 9px; border-radius:20px;
+    font-size:10.5px; font-weight:700; letter-spacing:.3px; white-space:nowrap;
+  }
+  .tier-dot{width:7px;height:7px;border-radius:50%;}
+  .tier-Green{background:var(--green-lt); color:var(--green);} .tier-Green .tier-dot{background:var(--green);}
+  .tier-Amber{background:var(--amber-lt); color:var(--amber);} .tier-Amber .tier-dot{background:var(--amber);}
+  .tier-Red{background:var(--red-lt); color:var(--red);} .tier-Red .tier-dot{background:var(--red);}
+  .tier-None{background:var(--grey-badge-lt); color:var(--grey-badge);} .tier-None .tier-dot{background:var(--grey-badge);}
+  .borrower-meta{display:flex; justify-content:space-between; align-items:center; margin-top:9px; font-size:11.5px; color:var(--muted);}
+  .composite-num{font-family:var(--mono); font-weight:600; color:var(--ink-soft);}
+  .sla-flag{color:var(--red); font-size:10.5px; font-weight:700; margin-top:6px; display:flex; align-items:center; gap:4px;}
+  .hardship-flag{
+    color:#fff; background:var(--red); font-size:10.5px; font-weight:700; margin-top:8px;
+    padding:5px 9px; border-radius:7px; display:flex; align-items:center; gap:5px;
+  }
+  .empty-note{color:var(--muted); font-size:12.5px; padding:20px 8px; line-height:1.5;}
+
+  /* ---------- Detail column ---------- */
+  .detail-col{overflow-y:auto; padding:28px 34px;}
+  .detail-empty{display:flex; flex-direction:column; align-items:center; justify-content:center; height:70%; color:var(--muted); text-align:center;}
+  .detail-empty .big{font-family:var(--serif); font-size:22px; color:var(--ink-soft); margin-bottom:8px;}
+  .detail-header{display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:22px;}
+  .detail-title{font-family:var(--serif); font-size:27px; font-weight:600; color:var(--navy);}
+  .detail-sub{font-size:13px; color:var(--muted); margin-top:4px;}
+  .detail-sub span{font-family:var(--mono);}
+  .ask-why-btn{
+    background:var(--navy); color:#fff; border:none; padding:9px 15px; border-radius:10px;
+    font-size:12.5px; font-weight:600; cursor:pointer; font-family:var(--sans);
+  }
+  .stat-row{display:flex; gap:14px; margin-bottom:24px;}
+  .stat-card{flex:1; background:var(--card); border:1px solid var(--border); border-radius:var(--radius); padding:16px 18px;}
+  .stat-label{font-size:10.5px; letter-spacing:1px; text-transform:uppercase; color:var(--muted); font-weight:700;}
+  .stat-value{font-family:var(--mono); font-size:24px; font-weight:600; margin-top:6px; color:var(--ink);}
+  .section-title{font-size:11px; letter-spacing:1.3px; text-transform:uppercase; font-weight:700; color:var(--muted); margin:26px 0 12px;}
+  .signal-row{display:flex; align-items:center; gap:12px; padding:10px 0; border-bottom:1px solid var(--border);}
+  .signal-row:last-child{border-bottom:none;}
+  .signal-name{width:150px; font-size:12.5px; font-weight:600; color:var(--ink-soft);}
+  .signal-bar-track{flex:1; height:7px; background:var(--paper); border-radius:5px; overflow:hidden;}
+  .signal-bar-fill{height:100%; border-radius:5px; background:var(--teal);}
+  .signal-value{width:38px; text-align:right; font-family:var(--mono); font-size:12.5px; font-weight:600;}
+  .source-tag{
+    font-size:9.5px; font-weight:700; padding:2px 7px; border-radius:6px; letter-spacing:.3px;
+    width:78px; text-align:center; text-transform:uppercase;
+  }
+  .src-fresh{background:var(--green-lt); color:var(--green);}
+  .src-cached_fallback{background:var(--amber-lt); color:var(--amber);}
+  .src-unavailable{background:var(--grey-badge-lt); color:var(--grey-badge);}
+  .history-list{display:flex; gap:6px; flex-wrap:wrap;}
+  .hist-chip{
+    font-family:var(--mono); font-size:10.5px; padding:6px 9px; border-radius:8px; border:1px solid var(--border);
+    display:flex; flex-direction:column; align-items:center; gap:3px; min-width:44px;
+  }
+  .hist-chip .c{color:var(--muted); font-size:9px;}
+  .case-card{background:var(--navy); color:#fff; border-radius:var(--radius); padding:18px 20px; margin-top:8px;}
+  .case-card .row{display:flex; justify-content:space-between; font-size:12.5px; padding:4px 0; color:#CBD3EE;}
+  .case-card .row b{color:#fff; font-weight:600;}
+
+  /* ---------- Chat column ---------- */
+  .chat-col{border-left:1px solid var(--border); display:flex; flex-direction:column; background:var(--card);}
+  .chat-head{padding:16px 18px; border-bottom:1px solid var(--border);}
+  .chat-head .t{font-family:var(--serif); font-size:16px; font-weight:600; color:var(--navy);}
+  .chat-head .s{font-size:11.5px; color:var(--muted); margin-top:2px;}
+  .chat-log{flex:1; overflow-y:auto; padding:16px 18px; display:flex; flex-direction:column; gap:12px;}
+  .msg{max-width:92%; font-size:13px; line-height:1.5;}
+  .msg.user{align-self:flex-end; background:var(--navy); color:#fff; padding:10px 13px; border-radius:12px 12px 3px 12px;}
+  .msg.agent{align-self:flex-start;}
+  .agent-bubble{background:var(--paper); padding:10px 13px; border-radius:12px 12px 12px 3px; color:var(--ink-soft); white-space:pre-wrap;}
+  .grounded-chip{
+    display:inline-flex; align-items:center; gap:5px; margin-top:6px; font-size:9.5px; font-weight:700;
+    padding:3px 8px; border-radius:6px; letter-spacing:.3px; text-transform:uppercase;
+  }
+  .g-trace{background:var(--teal-lt); color:var(--teal);}
+  .g-policy{background:#EEF0FA; color:var(--navy); border:1px solid var(--navy);}
+  .g-simulation{background:var(--gold-lt); color:var(--gold); border:1px dashed var(--gold);}
+  .g-none{background:var(--grey-badge-lt); color:var(--grey-badge);}
+  .chat-input-row{border-top:1px solid var(--border); padding:12px; display:flex; gap:8px;}
+  .chat-input-row input{
+    flex:1; border:1px solid var(--border); border-radius:10px; padding:10px 12px; font-size:13px;
+    font-family:var(--sans); outline:none;
+  }
+  .chat-input-row input:focus{border-color:var(--teal);}
+  .chat-send{background:var(--teal); color:#fff; border:none; border-radius:10px; padding:0 16px; font-weight:600; cursor:pointer; font-size:13px;}
+  .chat-send:disabled{opacity:.5; cursor:wait;}
+  .chat-suggestions{display:flex; gap:6px; flex-wrap:wrap; padding:0 18px 12px;}
+  .sugg-btn{
+    font-size:11px; padding:6px 10px; border-radius:16px; border:1px solid var(--border); background:#fff;
+    color:var(--ink-soft); cursor:pointer; font-family:var(--sans);
+  }
+  .sugg-btn:hover{border-color:var(--teal); color:var(--teal);}
+  .toast{
+    position:fixed; bottom:22px; left:50%; transform:translateX(-50%); background:var(--navy); color:#fff;
+    padding:12px 20px; border-radius:12px; font-size:13px; box-shadow:var(--shadow); z-index:100;
+    opacity:0; transition:opacity .25s; pointer-events:none;
+  }
+  .toast.show{opacity:1;}
+  ::-webkit-scrollbar{width:8px;} ::-webkit-scrollbar-thumb{background:#D6D9E6; border-radius:8px;}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><div class="dot"></div>MSME Early Warning — Portfolio Console</div>
+  <div class="topbar-spacer"></div>
+  <div class="role-chip" id="roleChip"></div>
+  <button class="logout-btn" onclick="logout()">Logout</button>
+</div>
+
+<div class="role-panel" id="rolePanel"></div>
+
+<div class="shell">
+  <div class="portfolio-col">
+    <div class="col-heading" id="portfolioColHeading">Portfolio</div>
+    <div id="borrowerList"></div>
+  </div>
+
+  <div class="detail-col" id="detailCol">
+    <div class="detail-empty">
+      <div class="big">Select a borrower</div>
+      <div>Choose anyone in your portfolio on the left to see their tier, signals, and case status.</div>
+    </div>
+  </div>
+
+  <div class="chat-col">
+    <div class="chat-head">
+      <div class="t">Ask the agent</div>
+      <div class="s">Every answer is labeled by what it's grounded in.</div>
+    </div>
+    <div class="chat-log" id="chatLog"></div>
+    <div class="chat-suggestions" id="chatSuggestions"></div>
+    <div class="chat-input-row">
+      <input id="chatInput" type="text" placeholder="Ask about a borrower, or your portfolio…" onkeydown="if(event.key==='Enter')sendChat();">
+      <button class="chat-send" id="chatSendBtn" onclick="sendChat()">Send</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+// ============================================================
+// SESSION / ROLE LAYER — additive only.
+//
+// CURRENT_USER used to be freely chosen from an unauthenticated pill
+// switcher (USERS[0], then whichever pill was clicked). It is now
+// always the identity of the actual logged-in session, resolved once
+// via GET /api/session below. Every existing call below this point
+// (loadPortfolio, selectBorrower, sendChat, runMonitoringCycle) is
+// UNCHANGED — same endpoints, same X-User-Id header, same request
+// shapes — only where CURRENT_USER comes from has changed.
+// ============================================================
+let CURRENT_USER = null;
+let CURRENT_ROLE = null;   // "ADMIN" | "RM"
+let CURRENT_NAME = null;
+let BORROWERS = [];
+let SELECTED_ID = null;
+
+const CASE_LABELS = {
+  log_only: {label:"Monitoring", cls:"tier-Green"},
+  rm_outreach: {label:"RM Outreach", cls:"tier-Amber"},
+  rm_outreach_plus_hardship_handoff: {label:"Hardship Handoff", cls:"tier-Red"},
+  manual_review_insufficient_data: {label:"Manual Review", cls:"tier-None"},
+};
+const TIER_RANK = {Red:0, Amber:1, Green:2, null:3};
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 3200);
+}
+
+async function api(path, opts={}){
+  opts.headers = Object.assign({'Content-Type':'application/json'}, opts.headers||{});
+  if(CURRENT_USER) opts.headers['X-User-Id'] = CURRENT_USER;
+  opts.credentials = 'same-origin'; // send the session cookie
+  const res = await fetch(path, opts);
+  if(!res.ok){
+    const body = await res.json().catch(()=>({detail: res.statusText}));
+    throw new Error(body.detail || res.statusText);
+  }
+  return res.json();
+}
+
+async function init(){
+  // Who is actually logged in? If nobody, bounce to /login — this
+  // replaces the old unauthenticated user switcher entirely.
+  let session;
+  try {
+    session = await api('/api/session');
+  } catch (e){
+    window.location.href = '/login';
+    return;
+  }
+  CURRENT_USER = session.user.id;
+  CURRENT_ROLE = session.user.role;
+  CURRENT_NAME = session.user.name;
+
+  renderRoleChip();
+  document.getElementById('portfolioColHeading').textContent =
+    CURRENT_ROLE === 'ADMIN' ? 'All Borrowers' : 'My Portfolio';
+
+  await loadPortfolio();
+}
+
+function renderRoleChip(){
+  const el = document.getElementById('roleChip');
+  const badgeCls = CURRENT_ROLE === 'ADMIN' ? 'badge admin' : 'badge';
+  el.innerHTML = `<span class="${badgeCls}">${CURRENT_ROLE}</span> ${CURRENT_NAME} (${CURRENT_USER})`;
+}
+
+async function logout(){
+  try { await api('/api/logout', {method:'POST'}); } catch(e){ /* ignore */ }
+  window.location.href = '/login';
+}
+
+// ---------- Role panel: RM portfolio summary OR Admin overview+controls ----------
+
+function tierCounts(list){
+  return {
+    total: list.length,
+    green: list.filter(b => b.tier === 'Green').length,
+    amber: list.filter(b => b.tier === 'Amber').length,
+    red: list.filter(b => b.tier === 'Red').length,
+  };
+}
+
+async function renderRolePanel(){
+  const el = document.getElementById('rolePanel');
+
+  if(CURRENT_ROLE === 'RM'){
+    // Portfolio numbers come straight from the existing /api/borrowers
+    // response (BORROWERS) once it loads — this just renders it as a
+    // summary strip; loadPortfolio() re-calls this after each refresh.
+    const counts = tierCounts(BORROWERS);
+    el.innerHTML = `
+      <div class="panel-title">My Portfolio</div>
+      <div class="mini-stat"><div class="l">Total</div><div class="v">${counts.total}</div></div>
+      <div class="mini-stat"><div class="l">Green</div><div class="v green">${counts.green}</div></div>
+      <div class="mini-stat"><div class="l">Amber</div><div class="v amber">${counts.amber}</div></div>
+      <div class="mini-stat"><div class="l">Red</div><div class="v red">${counts.red}</div></div>
+    `;
+    return;
+  }
+
+  if(CURRENT_ROLE === 'ADMIN'){
+    const counts = tierCounts(BORROWERS);
+    let cycleLabel = '—';
+    try {
+      const cycle = await api('/api/cycle/current');
+      cycleLabel = cycle.current_cycle;
+    } catch(e){ /* leave as — */ }
+
+    el.innerHTML = `
+      <div class="panel-title">Admin Dashboard — System Overview</div>
+      <div class="mini-stat"><div class="l">Total Borrowers</div><div class="v">${counts.total}</div></div>
+      <div class="mini-stat"><div class="l">Green</div><div class="v green">${counts.green}</div></div>
+      <div class="mini-stat"><div class="l">Amber</div><div class="v amber">${counts.amber}</div></div>
+      <div class="mini-stat"><div class="l">Red</div><div class="v red">${counts.red}</div></div>
+      <div class="cycle-badge" id="cycleBadge">Current Cycle: ${cycleLabel}</div>
+      <div class="panel-spacer"></div>
+      <div class="admin-actions">
+        <button class="advance-cycle-btn" id="advanceCycleBtn" onclick="advanceCycle()">⏭ Advance Cycle</button>
+        <button class="run-cycle-btn" id="runCycleBtn" onclick="runMonitoringCycle()">▶ Run Monitoring</button>
+      </div>
+    `;
+    return;
+  }
+
+  el.innerHTML = '';
+}
+
+async function loadPortfolio(){
+  const requestedFor = CURRENT_USER; // snapshot — see guard below
+  const data = await api('/api/borrowers');
+  if(requestedFor !== CURRENT_USER){
+    // The user switched again before this request finished. Discard —
+    // rendering it now would paint a previous user's portfolio under
+    // the currently-selected one, which is exactly the "wrong RM's
+    // borrowers on screen" bug this guard exists to prevent.
+    return;
+  }
+  BORROWERS = data.borrowers.sort((a,b) => (TIER_RANK[a.tier] ?? 3) - (TIER_RANK[b.tier] ?? 3));
+  renderPortfolio();
+  await renderRolePanel();
+}
+
+function renderPortfolio(){
+  const el = document.getElementById('borrowerList');
+  if(BORROWERS.length === 0){
+    el.innerHTML = `<div class="empty-note">No borrowers in this portfolio.</div>`;
+    return;
+  }
+  el.innerHTML = BORROWERS.map(b => {
+    const tier = b.tier || 'None';
+    const caseInfo = CASE_LABELS[b.case_action];
+    return `
+      <div class="borrower-row ${b.id===SELECTED_ID?'selected':''}" onclick="selectBorrower('${b.id}')">
+        <div class="borrower-row-top">
+          <div>
+            <div class="borrower-name">${b.name || b.id}</div>
+            <div class="borrower-id">${b.id} · ${b.sector||''}</div>
+          </div>
+          <span class="tier-pill tier-${tier}"><span class="tier-dot"></span>${tier === 'None' ? 'No data' : tier}</span>
+        </div>
+        <div class="borrower-meta">
+          <span>${b.rm_name || 'Unassigned'}</span>
+          <span class="composite-num">${b.composite_score != null ? b.composite_score.toFixed(1) : '—'}</span>
+        </div>
+        ${b.case_action === 'rm_outreach_plus_hardship_handoff'
+          ? `<div class="hardship-flag">\u2691 Hardship program \u2014 ${caseInfo ? caseInfo.label : 'active'}</div>`
+          : ''}
+        ${b.sla_breached ? `<div class="sla-flag">⚠ SLA breach — ${b.cycles_open} cycles open</div>` : ''}
+      </div>
+    `;
+  }).join('');
+}
+
+async function selectBorrower(id){
+  SELECTED_ID = id;
+  renderPortfolio();
+  try {
+    const detail = await api(`/api/borrowers/${id}`);
+    if(id !== SELECTED_ID){
+      // A different borrower was clicked before this one's detail came
+      // back — same class of race as loadPortfolio(). Discard rather than
+      // render one borrower's data under another's selected row.
+      return;
+    }
+    renderDetail(detail);
+    renderChatSuggestions(detail);
+  } catch(e){
+    // Access denied (e.g. borrower outside this RM's portfolio) — the
+    // existing Authorization Gate already enforced this server-side;
+    // just surface its message rather than any borrower-specific data.
+    document.getElementById('detailCol').innerHTML = `
+      <div class="detail-empty" style="height:40%">
+        <div class="big">Access denied</div>
+        <div>${e.message}</div>
+      </div>`;
+  }
+}
+
+function sourceLabel(src){
+  if(src === 'fresh') return 'FRESH';
+  if(src === 'cached_fallback') return 'CACHED';
+  if(src === 'unavailable') return 'N/A';
+  return (src||'MOCK').toUpperCase();
+}
+
+function renderDetail(d){
+  const el = document.getElementById('detailCol');
+  const latest = d.latest;
+
+  if(!latest){
+    el.innerHTML = `
+      <div class="detail-header">
+        <div><div class="detail-title">${d.name || d.id}</div>
+        <div class="detail-sub"><span>${d.id}</span> · ${d.record.sector} · ${d.record.region} · RM: ${d.rm_name || 'Unassigned'}</div></div>
+      </div>
+      <div class="detail-empty" style="height:40%">
+        <div class="big">No scoring history yet</div>
+        <div>Run a monitoring cycle to generate this borrower's first reading.</div>
+      </div>`;
+    return;
+  }
+
+  const signals = latest.subscores || {};
+  const sources = latest.signal_sources || {};
+  const signalOrder = ['gst_filing_delay','cash_flow','vendor_payment','industry_index'];
+  const signalNames = {gst_filing_delay:'GST Filing Delay', cash_flow:'Cash Flow', vendor_payment:'Vendor Payment', industry_index:'Industry Index'};
+
+  const signalsHtml = signalOrder.map(k => {
+    const v = signals[k];
+    const src = sources[k] || 'unavailable';
+    return `
+      <div class="signal-row">
+        <div class="signal-name">${signalNames[k]}</div>
+        <div class="signal-bar-track"><div class="signal-bar-fill" style="width:${v!=null ? v : 0}%; ${v==null?'background:var(--border)':''}"></div></div>
+        <div class="signal-value">${v != null ? Math.round(v) : '—'}</div>
+        <div class="source-tag src-${src}">${sourceLabel(src)}</div>
+      </div>`;
+  }).join('');
+
+  const histHtml = d.history.slice(-12).map(h => `
+    <div class="hist-chip">
+      <span class="c">c${h.cycle}</span>
+      <span style="color:${h.tier==='Red'?'var(--red)':h.tier==='Amber'?'var(--amber)':h.tier==='Green'?'var(--green)':'var(--muted)'}">${h.composite_score!=null?Math.round(h.composite_score):'—'}</span>
+    </div>`).join('');
+
+  const caseInfo = CASE_LABELS[d.case_action] || {label: d.case_action || '—'};
+
+  el.innerHTML = `
+    <div class="detail-header">
+      <div>
+        <div class="detail-title">${d.name || d.id}</div>
+        <div class="detail-sub"><span>${d.id}</span> · ${d.record.sector} · ${d.record.region} · RM: ${d.rm_name || 'Unassigned'}</div>
+      </div>
+      <button class="ask-why-btn" onclick="askWhy('${d.id}')">Ask why →</button>
+    </div>
+
+    <div class="stat-row">
+      <div class="stat-card">
+        <div class="stat-label">Tier</div>
+        <div class="stat-value"><span class="tier-pill tier-${d.tier||'None'}"><span class="tier-dot"></span>${d.tier||'No data'}</span></div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Composite score</div>
+        <div class="stat-value">${d.composite_score != null ? d.composite_score.toFixed(1) : '—'}</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">Cycle</div>
+        <div class="stat-value">${d.cycle}</div>
+      </div>
+    </div>
+
+    <div class="section-title">Signals this cycle</div>
+    <div>${signalsHtml}</div>
+
+    <div class="section-title">Recent history</div>
+    <div class="history-list">${histHtml}</div>
+
+    <div class="section-title">Case</div>
+    <div class="case-card">
+      <div class="row"><span>Status</span><b>${d.case_status || 'no case'}</b></div>
+      <div class="row"><span>Action</span><b>${caseInfo.label}</b></div>
+      ${d.sla_breached ? `<div class="row"><span>SLA</span><b style="color:#FF8A80">Breach — ${d.cycles_open} cycles open</b></div>` : ''}
+    </div>
+  `;
+}
+
+function renderChatSuggestions(d){
+  const el = document.getElementById('chatSuggestions');
+  el.innerHTML = [
+    `Why is ${d.id} at this tier?`,
+    `What's the status of ${d.id}?`,
+    `Show me ${d.id}'s history`,
+  ].map(q => `<button class="sugg-btn" onclick="askPreset('${q}')">${q}</button>`).join('');
+}
+
+function askWhy(id){ askPreset(`Why is ${id} at this tier?`); }
+function askPreset(q){
+  document.getElementById('chatInput').value = q;
+  sendChat();
+}
+
+function appendMsg(role, html){
+  const log = document.getElementById('chatLog');
+  const div = document.createElement('div');
+  div.className = `msg ${role}`;
+  div.innerHTML = html;
+  log.appendChild(div);
+  log.scrollTop = log.scrollHeight;
+}
+
+async function sendChat(){
+  const input = document.getElementById('chatInput');
+  const msg = input.value.trim();
+  if(!msg) return;
+  input.value = '';
+  appendMsg('user', msg);
+
+  const btn = document.getElementById('chatSendBtn');
+  btn.disabled = true;
+  appendMsg('agent', `<div class="agent-bubble" id="pending">Thinking…</div>`);
+
+  try {
+    const res = await api('/api/chat', {method:'POST', body: JSON.stringify({message: msg})});
+    const pending = document.getElementById('pending');
+    const gClass = {trace:'g-trace', policy:'g-policy', simulation:'g-simulation', none:'g-none'}[res.grounded_in] || 'g-none';
+    const gLabel = res.grounded_in === 'none' ? 'clarification' : res.grounded_in;
+    pending.parentElement.innerHTML = `
+      <div class="agent-bubble">${res.reply}</div>
+      <span class="grounded-chip ${gClass}">grounded in: ${gLabel}</span>
+    `;
+  } catch(e){
+    const pending = document.getElementById('pending');
+    pending.textContent = `Error: ${e.message}`;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+// ---------- Admin-only actions (buttons only rendered for ADMIN) ----------
+
+async function runMonitoringCycle(){
+  const btn = document.getElementById('runCycleBtn');
+  if(!btn) return;
+  btn.disabled = true;
+  btn.textContent = '⏳ Running…';
+  try {
+    const res = await api('/api/monitoring/run', {method:'POST'});
+    showToast(`Monitoring cycle complete — ${res.completed} completed, ${res.failed} failed.`);
+    await loadPortfolio();
+    if(SELECTED_ID){
+      const detail = await api(`/api/borrowers/${SELECTED_ID}`);
+      renderDetail(detail);
+    }
+  } catch(e){
+    showToast(`Error: ${e.message}`);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '▶ Run Monitoring';
+  }
+}
+
+async function advanceCycle(){
+  const btn = document.getElementById('advanceCycleBtn');
+  if(!btn) return;
+  btn.disabled = true;
+  btn.textContent = '⏳ Advancing…';
+  try {
+    // Reuses the SAME real monitoring pipeline as "Run Monitoring" —
+    // this codebase has no separate advance-only primitive (see
+    // /api/cycle/advance's docstring in app/main.py).
+    const res = await api('/api/cycle/advance', {method:'POST'});
+    showToast(`Cycle advanced — now at cycle ${res.current_cycle}.`);
+    await loadPortfolio();
+    if(SELECTED_ID){
+      const detail = await api(`/api/borrowers/${SELECTED_ID}`);
+      renderDetail(detail);
+    }
+  } catch(e){
+    showToast(`Error: ${e.message}`);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '⏭ Advance Cycle';
+  }
+}
+
+init();
+</script>
+</body>
+</html>

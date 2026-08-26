@@ -1,0 +1,11 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.chroma/
+chroma_db/
+*.db
+data/case_state/
+data/cases/
+data/credentials.json

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>MSME Early Warning Agent — Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12172B; --muted:#6B7086;
+    --paper:#F5F6FA; --card:#FFFFFF; --border:#E1E4EE;
+    --navy:#1E2761; --navy-dk:#141B47; --teal:#028090;
+    --red:#B3261E; --red-lt:#FBEAE9;
+    --radius:14px;
+    --shadow:0 1px 2px rgba(18,23,43,.04), 0 8px 24px -12px rgba(18,23,43,.12);
+    --serif:'Source Serif 4', Georgia, serif;
+    --sans:'IBM Plex Sans', -apple-system, sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html,body{height:100%;margin:0;}
+  body{
+    font-family:var(--sans); background:var(--paper); color:var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    -webkit-font-smoothing:antialiased;
+  }
+  .login-card{
+    width:360px; background:var(--card); border:1px solid var(--border); border-radius:var(--radius);
+    box-shadow:var(--shadow); padding:34px 30px;
+  }
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--serif); font-weight:700; font-size:19px; color:var(--navy); margin-bottom:6px;}
+  .brand .dot{width:10px;height:10px;border-radius:50%;background:var(--teal); box-shadow:0 0 0 4px rgba(2,128,144,.18);}
+  .sub{font-size:12.5px; color:var(--muted); margin-bottom:26px;}
+  label{display:block; font-size:11px; font-weight:700; letter-spacing:.6px; text-transform:uppercase; color:var(--muted); margin-bottom:6px;}
+  .field{margin-bottom:16px;}
+  input{
+    width:100%; border:1px solid var(--border); border-radius:10px; padding:11px 13px; font-size:14px;
+    font-family:var(--sans); outline:none; background:#fff; color:var(--ink);
+  }
+  input:focus{border-color:var(--teal);}
+  .login-btn{
+    width:100%; background:var(--navy); color:#fff; border:none; padding:12px; border-radius:10px;
+    font-weight:600; font-size:14px; cursor:pointer; margin-top:6px; font-family:var(--sans);
+  }
+  .login-btn:hover{background:var(--navy-dk);}
+  .login-btn:disabled{opacity:.6; cursor:wait;}
+  .error{
+    background:var(--red-lt); color:var(--red); font-size:12.5px; font-weight:600; padding:10px 12px;
+    border-radius:9px; margin-bottom:16px; display:none;
+  }
+  .error.show{display:block;}
+</style>
+</head>
+<body>
+
+<div class="login-card">
+  <div class="brand"><div class="dot"></div>MSME Early Warning Agent</div>
+  <div class="sub">Sign in to continue</div>
+
+  <div class="error" id="loginError"></div>
+
+  <form id="loginForm" onsubmit="return doLogin(event);">
+    <div class="field">
+      <label for="userId">User ID</label>
+      <input id="userId" name="userId" autocomplete="username" placeholder="e.g. RM001" autofocus />
+    </div>
+    <div class="field">
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" placeholder="••••••••" />
+    </div>
+    <button class="login-btn" id="loginBtn" type="submit">Login</button>
+  </form>
+</div>
+
+<script>
+async function doLogin(evt){
+  evt.preventDefault();
+  const userId = document.getElementById('userId').value.trim();
+  const password = document.getElementById('password').value;
+  const errEl = document.getElementById('loginError');
+  const btn = document.getElementById('loginBtn');
+  errEl.classList.remove('show');
+
+  if(!userId || !password){
+    errEl.textContent = 'Please enter both a User ID and a password.';
+    errEl.classList.add('show');
+    return false;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Signing in…';
+  try {
+    const res = await fetch('/api/login', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({user_id: userId, password: password})
+    });
+    if(!res.ok){
+      const body = await res.json().catch(() => ({detail: 'Login failed.'}));
+      throw new Error(body.detail || 'Login failed.');
+    }
+    window.location.href = '/';
+  } catch(e){
+    errEl.textContent = e.message;
+    errEl.classList.add('show');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Login';
+  }
+  return false;
+}
+</script>
+</body>
+</html>

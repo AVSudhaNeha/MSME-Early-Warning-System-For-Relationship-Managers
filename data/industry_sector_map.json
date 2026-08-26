@@ -1,0 +1,7 @@
+{
+  "_comment": "Maps this project's sectors to whatever category/item field values actually appear in YOUR data.gov.in IIP resource. These 4 values are PLACEHOLDERS — replace them by running 'python -m app.collectors.industry_collector' once with INDUSTRY_INDEX_MOCK_MODE=false, inspecting the printed raw response, and copying the real category names it contains.",
+  "auto_ancillary": "REPLACE_WITH_REAL_IIP_CATEGORY",
+  "food_processing": "REPLACE_WITH_REAL_IIP_CATEGORY",
+  "textiles": "REPLACE_WITH_REAL_IIP_CATEGORY",
+  "logistics": "REPLACE_WITH_REAL_IIP_CATEGORY"
+}

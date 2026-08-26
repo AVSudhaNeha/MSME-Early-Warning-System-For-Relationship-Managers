@@ -1,0 +1,23 @@
+[
+  {
+    "id": "RM001",
+    "name": "Meera Nair",
+    "role": "relationship_manager",
+    "portfolio": ["MSME-1001", "MSME-1002", "MSME-1003", "MSME-1006", "MSME-1008"],
+    "context": "RM, South Zone SME desk — can only see/act on her own assigned borrowers."
+  },
+  {
+    "id": "RM002",
+    "name": "Arjun Verma",
+    "role": "relationship_manager",
+    "portfolio": ["MSME-1004", "MSME-1005", "MSME-1007", "MSME-1009"],
+    "context": "RM, West Zone SME desk — separate portfolio from Meera, used to test the Authorization Gate."
+  },
+  {
+    "id": "CO001",
+    "name": "Priya Deshmukh",
+    "role": "credit_officer",
+    "portfolio": "ALL",
+    "context": "Credit Officer / admin — full portfolio visibility, can review manual-review and exception queues."
+  }
+]

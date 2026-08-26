@@ -1,0 +1,1408 @@
+[
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 1,
+    "subscores": {
+      "cash_flow": 87,
+      "gst_filing_delay": 88,
+      "industry_index": 50,
+      "vendor_payment": 90
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "baseline_coldstart",
+      "gst_filing_delay": "baseline_coldstart",
+      "industry_index": "baseline_coldstart",
+      "vendor_payment": "baseline_coldstart"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.5,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "baseline_coldstart",
+    "attribution": null,
+    "peer_avg_delta": null,
+    "peer_group_size": 0,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.483886+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 2,
+    "subscores": {
+      "cash_flow": 89,
+      "gst_filing_delay": 86,
+      "industry_index": 50,
+      "vendor_payment": 88
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.2,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "borrower_specific",
+    "peer_avg_delta": null,
+    "peer_group_size": 1,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.552075+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 3,
+    "subscores": {
+      "cash_flow": 83,
+      "gst_filing_delay": 89,
+      "industry_index": 50,
+      "vendor_payment": 92
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 81.9,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "borrower_specific",
+    "peer_avg_delta": null,
+    "peer_group_size": 1,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.609378+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 4,
+    "subscores": {
+      "cash_flow": 85,
+      "gst_filing_delay": 87,
+      "industry_index": 50,
+      "vendor_payment": 88
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 81.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.1,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.670671+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 5,
+    "subscores": {
+      "cash_flow": 92,
+      "gst_filing_delay": 84,
+      "industry_index": 50,
+      "vendor_payment": 86
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.3,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.5,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.767114+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 6,
+    "subscores": {
+      "cash_flow": 96,
+      "gst_filing_delay": 89,
+      "industry_index": 50,
+      "vendor_payment": 84
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 84.1,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.0,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.850584+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 7,
+    "subscores": {
+      "cash_flow": 93,
+      "gst_filing_delay": 93,
+      "industry_index": 50,
+      "vendor_payment": 84
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 83.8,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.7,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.914999+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 8,
+    "subscores": {
+      "cash_flow": 90,
+      "gst_filing_delay": 97,
+      "industry_index": 50,
+      "vendor_payment": 80
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.4,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.5,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:21.958423+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 9,
+    "subscores": {
+      "cash_flow": 88,
+      "gst_filing_delay": 100,
+      "industry_index": 50,
+      "vendor_payment": 80
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.3,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.3,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:22.053176+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 10,
+    "subscores": {
+      "cash_flow": 87,
+      "gst_filing_delay": 100,
+      "industry_index": 50,
+      "vendor_payment": 82
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.5,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.5,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:22.172461+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 11,
+    "subscores": {
+      "cash_flow": 86,
+      "gst_filing_delay": 97,
+      "industry_index": 50,
+      "vendor_payment": 84
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.2,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.1,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:22.294703+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 12,
+    "subscores": {
+      "cash_flow": 85,
+      "gst_filing_delay": 95,
+      "industry_index": 50,
+      "vendor_payment": 84
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 81.4,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.2,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:22.447842+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 13,
+    "subscores": {
+      "cash_flow": 83,
+      "gst_filing_delay": 91,
+      "industry_index": 50,
+      "vendor_payment": 82
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 79.3,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.1,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:22.606164+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 14,
+    "subscores": {
+      "cash_flow": 80,
+      "gst_filing_delay": 86,
+      "industry_index": 50,
+      "vendor_payment": 86
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 78.5,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 1.8,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:22.792819+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 15,
+    "subscores": {
+      "cash_flow": 82,
+      "gst_filing_delay": 81,
+      "industry_index": 50,
+      "vendor_payment": 84
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 77.6,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.8,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:23.055899+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 16,
+    "subscores": {
+      "cash_flow": 79,
+      "gst_filing_delay": 76,
+      "industry_index": 50,
+      "vendor_payment": 80
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 74.3,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 1.0,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:23.327928+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 17,
+    "subscores": {
+      "cash_flow": 85,
+      "gst_filing_delay": 73,
+      "industry_index": 50,
+      "vendor_payment": 80
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 75.8,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.7,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:23.542871+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 18,
+    "subscores": {
+      "cash_flow": 90,
+      "gst_filing_delay": 69,
+      "industry_index": 50,
+      "vendor_payment": 76
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 75.6,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.4,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-07-31T10:16:23.824552+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 19,
+    "subscores": {
+      "cash_flow": 87,
+      "gst_filing_delay": 70,
+      "industry_index": 50,
+      "vendor_payment": 80
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 76.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -2.2,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-04T01:21:47.939821+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 20,
+    "subscores": {
+      "cash_flow": 90,
+      "gst_filing_delay": 75,
+      "industry_index": 50,
+      "vendor_payment": 80
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 78.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.3,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-04T01:27:14.856443+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 21,
+    "subscores": {
+      "cash_flow": 93,
+      "gst_filing_delay": 79,
+      "industry_index": 50,
+      "vendor_payment": 76
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 78.7,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.8,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-04T11:47:36.321694+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 22,
+    "subscores": {
+      "cash_flow": 98,
+      "gst_filing_delay": 83,
+      "industry_index": 50,
+      "vendor_payment": 72
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 80.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 2.0,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-04T15:32:18.875338+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 23,
+    "subscores": {
+      "cash_flow": 100,
+      "gst_filing_delay": 86,
+      "industry_index": 50,
+      "vendor_payment": 76
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 82.5,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 1.6,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-09T15:42:00.292926+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 24,
+    "subscores": {
+      "cash_flow": 93,
+      "gst_filing_delay": 89,
+      "industry_index": 50,
+      "vendor_payment": 72
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 79.4,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 1.1,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-09T16:04:24.500638+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 25,
+    "subscores": {
+      "cash_flow": 100,
+      "gst_filing_delay": 91,
+      "industry_index": 50,
+      "vendor_payment": 70
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 81.7,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.5,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-10T07:08:35.517083+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 26,
+    "subscores": {
+      "cash_flow": 99,
+      "gst_filing_delay": 95,
+      "industry_index": 50,
+      "vendor_payment": 66
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 81.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 1.0,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-11T14:04:27.441828+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 27,
+    "subscores": {
+      "cash_flow": 97,
+      "gst_filing_delay": 97,
+      "industry_index": 50,
+      "vendor_payment": 64
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 80.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.2,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-11T17:02:23.149200+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 28,
+    "subscores": {
+      "cash_flow": 92,
+      "gst_filing_delay": 98,
+      "industry_index": 50,
+      "vendor_payment": 64
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 78.5,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.7,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-11T19:32:49.165412+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 29,
+    "subscores": {
+      "cash_flow": 90,
+      "gst_filing_delay": 99,
+      "industry_index": 50,
+      "vendor_payment": 60
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 76.8,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.1,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-11T19:33:00.355377+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 30,
+    "subscores": {
+      "cash_flow": 85,
+      "gst_filing_delay": 100,
+      "industry_index": 50,
+      "vendor_payment": 56
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 74.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.2,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-11T19:45:37.412118+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 31,
+    "subscores": {
+      "cash_flow": 82,
+      "gst_filing_delay": 100,
+      "industry_index": 50,
+      "vendor_payment": 52
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 71.8,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 1.6,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-12T17:07:32.505139+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 32,
+    "subscores": {
+      "cash_flow": 81,
+      "gst_filing_delay": 100,
+      "industry_index": 50,
+      "vendor_payment": 48
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "confirmed_deteriorating",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "confirmed_deteriorating"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 70.2,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "confirmed_deteriorating_tier_applied",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 2.3,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-12T17:17:14.850620+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 33,
+    "subscores": {
+      "cash_flow": 89,
+      "gst_filing_delay": 100,
+      "industry_index": 50,
+      "vendor_payment": 48
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 73.0,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 2.4,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-13T16:43:03.150246+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 34,
+    "subscores": {
+      "cash_flow": 92,
+      "gst_filing_delay": 95,
+      "industry_index": 50,
+      "vendor_payment": 48
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "single_period_dip",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 73.1,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -1.8,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-13T18:18:05.652387+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 35,
+    "subscores": {
+      "cash_flow": 100,
+      "gst_filing_delay": 90,
+      "industry_index": 50,
+      "vendor_payment": 52
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "confirmed_deteriorating",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 76.1,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.1,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-13T19:30:46.044009+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 36,
+    "subscores": {
+      "cash_flow": 99,
+      "gst_filing_delay": 92,
+      "industry_index": 50,
+      "vendor_payment": 56
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 77.3,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.9,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-14T03:30:40.189310+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 37,
+    "subscores": {
+      "cash_flow": 100,
+      "gst_filing_delay": 95,
+      "industry_index": 50,
+      "vendor_payment": 60
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "stable_or_improving",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "stable_or_improving"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 79.5,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "stable_or_improving_applied_immediately",
+    "attribution": "peer_driven",
+    "peer_avg_delta": 0.4,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-14T03:30:53.222673+00:00"
+  },
+  {
+    "borrower_id": "MSME-1001",
+    "cycle": 38,
+    "subscores": {
+      "cash_flow": 93,
+      "gst_filing_delay": 100,
+      "industry_index": 50,
+      "vendor_payment": 56
+    },
+    "signal_sources": {
+      "cash_flow": "fresh",
+      "gst_filing_delay": "fresh",
+      "industry_index": "fresh",
+      "vendor_payment": "fresh"
+    },
+    "gate_status": {
+      "cash_flow": "single_period_dip",
+      "gst_filing_delay": "stable_or_improving",
+      "industry_index": "stable_or_improving",
+      "vendor_payment": "single_period_dip"
+    },
+    "data_availability": "full_or_partial_ok",
+    "composite_score": 76.8,
+    "raw_tier": "Green",
+    "tier": "Green",
+    "smoothing_note": "single_period_dip_smoothed_tier_held",
+    "attribution": "peer_driven",
+    "peer_avg_delta": -0.5,
+    "peer_group_size": 2,
+    "case_id": null,
+    "case_status": null,
+    "case_lifecycle_action": "no_case_needed",
+    "rm_id": "RM001",
+    "rm_name": "Meera Nair",
+    "case_action": "log_only",
+    "recorded_at": "2026-08-14T06:58:30.374347+00:00"
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "MSME-1001",
+    "name": "Sunrise Auto Components Pvt Ltd",
+    "sector": "auto_ancillary",
+    "region": "TN",
+    "gstin": "33AAECS1234F1Z5",
+    "rm_id": "RM001",
+    "onboarded_cycle": 1,
+    "archetype": "steady",
+    "onboarded_on": "2025-02-21"
+  },
+  {
+    "id": "MSME-1002",
+    "name": "Coastal Seafoods Exports",
+    "sector": "food_processing",
+    "region": "KL",
+    "gstin": "32AABCC5678G1Z2",
+    "rm_id": "RM001",
+    "onboarded_cycle": 1,
+    "archetype": "seasonal",
+    "onboarded_on": "2026-01-17"
+  },
+  {
+    "id": "MSME-1003",
+    "name": "Vinyas Textiles",
+    "sector": "textiles",
+    "region": "TN",
+    "gstin": "33AAFCV4321H1Z7",
+    "rm_id": "RM001",
+    "onboarded_cycle": 1,
+    "archetype": "gradual_decline",
+    "onboarded_on": "2024-01-28"
+  },
+  {
+    "id": "MSME-1004",
+    "name": "Deccan Precision Tools",
+    "sector": "auto_ancillary",
+    "region": "MH",
+    "gstin": "27AACPD8765K1Z9",
+    "rm_id": "RM002",
+    "onboarded_cycle": 1,
+    "archetype": "sharp_decline",
+    "onboarded_on": "2025-08-20"
+  },
+  {
+    "id": "MSME-1005",
+    "name": "Kokan Agro Traders",
+    "sector": "food_processing",
+    "region": "MH",
+    "gstin": "27AAECK2468L1Z3",
+    "rm_id": "RM002",
+    "onboarded_cycle": 6,
+    "archetype": "cold_start",
+    "onboarded_on": "2026-03-18"
+  },
+  {
+    "id": "MSME-1006",
+    "name": "Bharat Freight Carriers",
+    "sector": "logistics",
+    "region": "TN",
+    "gstin": "33AADCB1122M1Z4",
+    "rm_id": "RM001",
+    "onboarded_cycle": 1,
+    "archetype": "false_alarm_recovery",
+    "onboarded_on": "2025-05-22"
+  },
+  {
+    "id": "MSME-1007",
+    "name": "Konkan Logistics Hub",
+    "sector": "logistics",
+    "region": "MH",
+    "gstin": "27AAFCK3344N1Z8",
+    "rm_id": "RM002",
+    "onboarded_cycle": 1,
+    "archetype": "peer_wide_shock",
+    "onboarded_on": "2024-10-24"
+  },
+  {
+    "id": "MSME-1008",
+    "name": "Anand Weaving Mills",
+    "sector": "textiles",
+    "region": "TN",
+    "gstin": "33AAGCA5566P1Z1",
+    "rm_id": "RM001",
+    "onboarded_cycle": 1,
+    "archetype": "insufficient_data",
+    "onboarded_on": "2025-11-18"
+  },
+  {
+    "id": "MSME-1009",
+    "name": "Deccan Precision Tools' Sister Unit \u2014 Deccan Fabricators",
+    "sector": "auto_ancillary",
+    "region": "MH",
+    "gstin": "27AAHCD7788Q1Z6",
+    "rm_id": "RM002",
+    "onboarded_cycle": 1,
+    "archetype": "sandbox_outage",
+    "onboarded_on": "2025-06-21"
+  }
+]
